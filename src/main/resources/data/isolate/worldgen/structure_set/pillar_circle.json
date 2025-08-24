@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "isolate:pillar_circle",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing":240,
+    "separation":120,
+    "salt": 123745092
+  }
+}

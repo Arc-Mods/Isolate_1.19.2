@@ -1,0 +1,12 @@
+{
+  "itemGroup.isolate.group": "Isolate",
+  "item.isolate.charm": "Charm of Isolation",
+  "item.isolate.knife": "Tainted Knife",
+  "item.isolate.charm.desc": "Transports the user to Isolation.",
+  "item.isolate.knife.desc": "Stained by divine blood.",
+  "item.isolate.knife.desc_b": "Pierces the target, returning them to the Overworld.",
+  "block.isolate.pillar": "Pillar",
+  "block.isolate.vert_pillar": "Pillar",
+  "block.isolate.horiz_pillar": "Pillar",
+  "block.isolate.packing_box": "Package"
+}

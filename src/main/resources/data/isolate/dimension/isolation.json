@@ -1,0 +1,17 @@
+{
+  "type": "isolate:isolation_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "isolate:isolation_biome",
+      "lakes": false,
+      "features": true,
+      "layers": [
+        {
+          "height": 180,
+          "block": "isolate:white"
+        }
+      ]
+    }
+  }
+}

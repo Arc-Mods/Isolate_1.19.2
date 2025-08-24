@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "isolate:pillar"
+  },
+  "result": "isolate:horiz_pillar",
+  "count": 1
+}
