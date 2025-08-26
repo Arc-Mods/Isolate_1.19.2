@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " hG",
+    "hNR",
+    "A  "
+  ],
+  "key": {
+    "h": {
+      "item": "minecraft:gold_ingot"
+    },
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "R": {
+      "item": "minecraft:raw_gold"
+    },
+    "A": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "result": {
+    "item": "isolate:knife",
+    "count": 1
+  }
+}

@@ -7,6 +7,9 @@
 	"authors": [
 		"Arc."
 	],
+	"contributors": [
+		"Chemthunder (Dimension switch code)"
+	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"

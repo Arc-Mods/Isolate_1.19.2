@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#n#",
+    "nNn",
+    "#n#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:quartz_pillar"
+    },
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "isolate:charm",
+    "count": 1
+  }
+}
