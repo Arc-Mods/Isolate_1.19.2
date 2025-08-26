@@ -48,8 +48,8 @@ public class KnifeItem extends SwordItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(this.getDescription().formatted(Formatting.YELLOW));
-        tooltip.add(this.getDescription_a().formatted(Formatting.YELLOW));
+        tooltip.add(this.getDescription().formatted(Formatting.GOLD));
+        tooltip.add(this.getDescription_a().formatted(Formatting.GOLD));
     }
 
     public MutableText getDescription() {
