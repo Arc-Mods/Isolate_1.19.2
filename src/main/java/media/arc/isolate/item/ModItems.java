@@ -28,6 +28,7 @@ public class ModItems {
                 stacks.add(new ItemStack(WHITE));
                 stacks.add(new ItemStack(CHARM));
                 stacks.add(new ItemStack(KNIFE));
+                stacks.add(new ItemStack(PILLAR_GRAY));
                 stacks.add(new ItemStack(PILLAR));
                 stacks.add(new ItemStack(PILLAR_HORIZONTAL));
                 stacks.add(new ItemStack(HORIZ_PILLAR));

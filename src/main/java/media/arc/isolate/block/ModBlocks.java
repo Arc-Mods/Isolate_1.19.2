@@ -31,6 +31,12 @@ public class ModBlocks {
             ModItems.GROUP
     );
 
+    public static final Block PILLAR_GRAY = registerBlock(
+            "pillar_gray",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR).requiresTool()),
+            ModItems.GROUP
+    );
+
     public static final Block PILLAR_HORIZONTAL = registerBlock(
             "vert_pillar",
             new HorizontalPillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR).requiresTool()),

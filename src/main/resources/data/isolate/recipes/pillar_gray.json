@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "isolate:pillar"
+  },
+  "addition": {
+    "item": "minecraft:polished_basalt"
+  },
+  "result": {
+    "item": "isolate:pillar_gray"
+  }
+}
