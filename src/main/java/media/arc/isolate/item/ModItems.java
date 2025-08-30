@@ -1,15 +1,17 @@
 package media.arc.isolate.item;
 
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+
+import media.arc.isolate.block.ModBlocks;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterials;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import net.minecraft.util.registry.Registry;
-
-import static media.arc.isolate.block.ModBlocks.*;
 
 public class ModItems {
 
@@ -18,24 +20,29 @@ public class ModItems {
 
 
     private static Item register(String name, Item item) {
-        return Registry.register(Registry.ITEM, new Identifier("isolate", name), item);
+        return Registry.register(Registries.ITEM, new Identifier("isolate", name), item);
     }
 
-    public static final ItemGroup GROUP = FabricItemGroupBuilder
-            .create(new Identifier("isolate", "group"))
-            .icon(() -> new ItemStack(CHARM))
-            .appendItems(stacks -> {
-                stacks.add(new ItemStack(WHITE));
-                stacks.add(new ItemStack(CHARM));
-                stacks.add(new ItemStack(KNIFE));
-                stacks.add(new ItemStack(PILLAR_GRAY));
-                stacks.add(new ItemStack(PILLAR));
-                stacks.add(new ItemStack(PILLAR_HORIZONTAL));
-                stacks.add(new ItemStack(HORIZ_PILLAR));
-                stacks.add(new ItemStack(PACKAGE));
+    public static final ItemGroup GROUP = Registry.register(
+            Registries.ITEM_GROUP,
+            new Identifier("isolate", "group"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("itemGroup.isolate.group")) // <-- REQUIRED NOW
+                    .icon(() -> new ItemStack(ModItems.CHARM))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.WHITE);
+                        entries.add(ModItems.CHARM);
+                        entries.add(ModItems.KNIFE);
+                        entries.add(ModBlocks.PILLAR_GRAY);
+                        entries.add(ModBlocks.PILLAR);
+                        entries.add(ModBlocks.PILLAR_HORIZONTAL);
+                        entries.add(ModBlocks.HORIZ_PILLAR);
+                        entries.add(ModBlocks.PACKAGE);
+                    })
+                    .build()
+    );
 
-            })
-            .build();
+
 
     public static void init() {
     }

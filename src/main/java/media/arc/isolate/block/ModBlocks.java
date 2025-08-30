@@ -1,65 +1,56 @@
 package media.arc.isolate.block;
 
-import media.arc.isolate.item.ModItems;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
 
     public static final Block WHITE = registerBlock(
             "white",
-            new Block(Block.Settings.copy(Blocks.WHITE_CONCRETE).strength(250,250).resistance(250)),
-            ModItems.GROUP
+            new Block(Block.Settings.copy(Blocks.WHITE_CONCRETE).strength(250, 250).resistance(250))
     );
 
     public static final Block PACKAGE = registerBlock(
             "packing_box",
-            new PackingBoxBlock(FabricBlockSettings.copyOf(Blocks.CHEST).requiresTool()),
-            ModItems.GROUP
+            new PackingBoxBlock(Block.Settings.copy(Blocks.CHEST).requiresTool())
     );
 
     public static final Block PILLAR = registerBlock(
             "pillar",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR).requiresTool()),
-            ModItems.GROUP
+            new PillarBlock(Block.Settings.copy(Blocks.QUARTZ_PILLAR).requiresTool())
     );
 
     public static final Block PILLAR_GRAY = registerBlock(
             "pillar_gray",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR).requiresTool()),
-            ModItems.GROUP
+            new PillarBlock(Block.Settings.copy(Blocks.QUARTZ_PILLAR).requiresTool())
     );
 
     public static final Block PILLAR_HORIZONTAL = registerBlock(
             "vert_pillar",
-            new HorizontalPillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR).requiresTool()),
-            ModItems.GROUP
+            new HorizontalPillarBlock(Block.Settings.copy(Blocks.QUARTZ_PILLAR).requiresTool())
     );
 
     public static final Block HORIZ_PILLAR = registerBlock(
             "horiz_pillar",
-            new HorizPillarBlock(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR).requiresTool()),
-            ModItems.GROUP
+            new HorizPillarBlock(Block.Settings.copy(Blocks.QUARTZ_PILLAR).requiresTool())
     );
 
-    private static Block registerBlock(String name, Block block, ItemGroup group) {
-        registerBlockItem(name, block, group);
-        return Registry.register(Registry.BLOCK, new Identifier("isolate", name), block);
+    private static Block registerBlock(String name, Block block) {
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier("isolate", name), block);
     }
 
-    private static Item registerBlockItem(String name, Block block, ItemGroup group) {
-        return Registry.register(Registry.ITEM, new Identifier("isolate", name),
-                new BlockItem(block, new FabricItemSettings().group(group)));
+    private static Item registerBlockItem(String name, Block block) {
+        return Registry.register(Registries.ITEM, new Identifier("isolate", name),
+                new BlockItem(block, new FabricItemSettings()));
     }
 
-    public static void init(){
-
-    }
+    public static void init() {}
 }
+
